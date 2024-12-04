@@ -1,4 +1,4 @@
-/* Container styling */
+
 .gallery-container {
   max-width: 800px;
   margin: 20px auto;
@@ -9,25 +9,25 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Flexbox layout */
+
 .content {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-/* Gallery styling */
+
 .gallery {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-/* Individual image items */
+
 .gallery-item {
   width: 50px;
   height: 50px;
-  border-radius: 50%; /* Makes images round */
+  border-radius: 50%;
   overflow: hidden;
   background-color: #fff;
   border: 2px solid #ccc;
@@ -43,7 +43,6 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Text section styling */
 .text {
   text-align: left;
 }
