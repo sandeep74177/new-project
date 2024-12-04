@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 
 const PlaceholderIcon = "https://via.placeholder.com/38";
-const ErrorIcon = "https://tse3.mm.bing.net/th?id=OIP.76Kw_Xh3DRaivy0fylLF4QHaF7&pid=Api&P=0&h=180";
+const ErrorIcon = "https://via.placeholder.com/38/FF0000/FFFFFF?text=Error";
 const SpinnerIcon = "https://via.placeholder.com/38/CCCCCC/FFFFFF?text=Loading";
 
 const ImageGallery = ({ name, count, images }) => {
@@ -16,7 +16,7 @@ const ImageGallery = ({ name, count, images }) => {
 
   useEffect(() => {
     const retryImageLoad = (index) => {
-      if (imageStatus[index].retries >= 3) return; // Max retries reached
+      if (imageStatus[index].retries >= 3) return; 
 
       const timer = setTimeout(() => {
         setImageStatus((prevStatus) =>
@@ -25,16 +25,16 @@ const ImageGallery = ({ name, count, images }) => {
               ? {
                   ...img,
                   retries: img.retries + 1,
-                  error: Math.random() < 0.5, // Simulate error (50% chance)
+                  error: Math.random() < 0.5, 
                   loading: false,
-                  ready: Math.random() > 0.5, // Simulate successful load
+                  ready: Math.random() > 0.5, 
                 }
               : img
           )
         );
       }, 5000);
 
-      return () => clearTimeout(timer); // Cleanup timeout
+      return () => clearTimeout(timer); 
     };
 
     imageStatus.forEach((img, index) => {
@@ -78,7 +78,7 @@ const ImageGallery = ({ name, count, images }) => {
         </div>
         <div className="text">
           <h2>{name}</h2>
-          <p>3+ online courses</p>
+          <p>3+ offline centers</p>
         </div>
       </div>
     </div>
